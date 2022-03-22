@@ -1,0 +1,52 @@
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+.loader {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:140px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  text-align:center;
+  line-height:30px;
+  font-family:"Roboto Condensed";
+  text-transform:uppercase;
+  font-size:15px;
+}
+.loader:before,.loader:after {
+  content:"";
+  position:absolute;
+  top:-15px;
+  left:-15px;
+  width:15px;
+  height:15px;
+  background:#00acee;
+  border-radius:50%;
+  animation:loading 1500ms ease-in-out infinite;
+}
+.loader:after {
+  animation-delay:750ms;
+}
+@keyframes loading {
+  0% {
+    top:-15px;
+    left:-15px;
+  }
+  25% {
+    top:-15px;
+    left:140px;
+  }
+  50% {
+    top:30px;
+    left:140px;
+  }
+  75% {
+    top:30px;
+    left:-15px;
+  }
+}
